@@ -1,0 +1,15 @@
+# Site settings
+title: Temple Dev
+email: tudev@temple.edu
+description: > # this means to ignore newlines until "baseurl:"
+    Temple Dev is the Software Development Community at Temple University.
+    We bring to students what amounts to the missing Software Development major.
+    Through exposure to new ideas and technologies, we aim to equip students
+    at Temple with the skills and interests befitting a modern software developer.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://tudev.org" # the base hostname & protocol for your site
+twitter_username: tudev
+github_username:  tudev
+
+# Build settings
+markdown: kramdown
