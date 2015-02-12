@@ -1,6 +1,106 @@
 .home.page {
+    position: relative;
+
+    .hideable {
+        position: relative;
+        opacity: 1;
+        top: 0px;
+        transition: top 500ms, opacity 500ms;
+    }
+    .hidden {
+        opacity: 0;
+        top: 20px;
+    }
+
     .bg {
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        background: url(/img/home-bg.jpg);
+        background-size: cover;
+        opacity: 0.25;
+    }
+
+    .gradient {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        background: linear-gradient(to bottom, #e0e8ea 0%, transparent 30%);
+    }
+
+    .text {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        box-sizing: border-box;
+
+        & > .container {
+            display: table;
+            width: 900px;
+            height: 100%;
+            margin: 0 auto;
+
+            & > .container {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                width: 100%;
+
+                .headline {
+                    font-size: 95px;
+                    color: #444444;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-weight: 300;
+
+                    .expansion {
+                        display: inline-block;
+                    }
+                }
+
+                .description {
+                    font-size: 25px;
+                    color: #444444;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 2.6px;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    margin-left: 5px;
+                    position: relative;
+                    left: -5px;
+                    text-shadow: 0px 0px 8px white;
+                }
+
+                .learn-more {
+                    border: 3px solid #444444;
+                    width: 300px;
+                    height: 50px;
+                    color: #444444;
+                    text-align: center;
+                    padding-top: 11px;
+                    margin: 0 auto;
+                    margin-top: 60px;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 2.2px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 17px;
+                    cursor: pointer;
+                    transition: background 250ms, color 250ms, top 500ms, opacity 500ms;
+
+                    &:hover {
+                        background: #444444;
+                        color: #dddddd;
+                    }
+                }
+            }
+        }
     }
 }

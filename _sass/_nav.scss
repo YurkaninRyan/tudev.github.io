@@ -4,12 +4,24 @@ nav {
     left: 0px;
     top: 0px;
     right: 0px;
-    height: 50px;
-    background: #0F2D40;
+    background: #9e1b34;
     text-align: center;
     z-index: 200;
+    transition: background 500ms;
 
-    &.transparent {
+    &.is-home {
+        background: transparent;
+
+        .logo {
+            height: 100px;
+            background-image: url(/img/icon-dark.png);
+        }
+
+        .links .link {
+            color: #444444;
+            height: 100px;
+            padding-top: 43px;
+        }
         // background: rgba(0, 0, 0, 0);
     }
 
@@ -27,6 +39,7 @@ nav {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
+        transition: height 500ms;
     }
 
     .links {
@@ -45,7 +58,7 @@ nav {
             opacity: 1.0;
             font-weight: 700;
             -webkit-font-smoothing: antialiased;
-            transition: opacity 250ms;
+            transition: opacity 250ms, height 500ms, padding-top 500ms;
             letter-spacing: 1.5px;
 
             &:last-child {
